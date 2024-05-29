@@ -55,14 +55,54 @@
     </p>
 
     <script>
-      function firstLetterBig() {
+      function firstLetterBig(str) {
         // TODO: 조건을 만족하는 firstLetterBig 함수를 완성해주세요.
+
+        // CASE 1)
+        // let str_array = str.split("");
+        // str_array[0] = str_array[0].toUpperCase();
+        // result = str_array.join("");
+        // return result;
+        
+        // CASE 2)
+        // let result="";
+        // result = str[0].toUpperCase();
+        // for (i= 1; i < str.length; i++) {
+        //   result += str[i];
+        // }
+        // return result;
+
+
+        // CASE 3)
+        let result = "";
+
+        let str_array =[];
+
+        for (i= 0; i < str.length; i++) {
+
+          str_array[i] = str[i];
+
+        }
+
+        str_array[0] = str_array[0].toUpperCase();
+
+        for (i = 0; i < str_array.length; i++) {
+
+          result +=  str_array[i];
+
+        }
+
+        return result;
+      
       }
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 firstLetterBig 함수를 호출해주세요!
-      // firstLetterBig('happy');
-      // firstLetterBig('lucky');
-      // firstLetterBig('hi there!');
+      console.log(`firstLetterBig('happy')`);
+      console.log(firstLetterBig('happy'));
+      console.log(`firstLetterBig('lucky')`)
+      console.log(firstLetterBig('lucky'));
+      console.log(`firstLetterBig('hi there')`)
+      console.log(firstLetterBig('hi there!'));
     </script>
   </body>
 </html>

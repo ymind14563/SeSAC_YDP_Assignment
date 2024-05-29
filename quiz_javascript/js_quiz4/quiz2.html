@@ -57,6 +57,63 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
+
+    // let arr = [`mint`, `yogurt`, `choco`, `greentea`, `vanilla`];
+
+    // removeVanilla = arr.pop();
+    // console.log(arr);
+
+    // addCoffe = arr.push('coffe')
+    // console.log(arr);
+    
+    // addCheesecake = arr.unshift('cheesecake');
+    // console.log(arr);
+
+
+    // CASE 1) 바닐라 제거
+    let arr = [`mint`, `yogurt`, `choco`, `greentea`, `vanilla`];
+
+    let removeVanilla_array = [];
+
+    for (i = 0; i < arr.length - 1; i++) {
+
+    removeVanilla_array[i] = arr[i];
+
+    }
+
+    console.log(removeVanilla_array);
+
+
+    // CASE 2) coffe 마지막 추가
+
+    let addCoffe_array = [];
+    
+    for (i = 0; i < removeVanilla_array.length; i++){
+
+        addCoffe_array[i] = removeVanilla_array[i];
+
+    }
+    
+    addCoffe_array[removeVanilla_array.length] = `coffe`;
+    
+    console.log(addCoffe_array);
+
+
+    // CASE 3) cheesecake 맨앞 추가
+
+    let addCheesecake_arry = [];
+
+    for (i = 0; i < addCoffe_array.length; i++){
+
+      addCheesecake_arry[0] = `cheesecake`;
+
+      addCheesecake_arry[i + 1] = addCoffe_array[i];
+      
+    }
+
+    console.log(addCheesecake_arry);
+
+
     </script>
   </body>
 </html>

@@ -55,6 +55,62 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
+
+      const fruits = [`coffe`, `blueberry`, `apple`, `pasta`];
+
+
+      // CASE1) 첫번째 coffe 제거
+      removeCoffe = fruits.shift();
+      console.log(fruits);
+
+      // CASE2) 마지막 pasta 제거
+      removePasta = fruits.pop();
+      console.log(fruits);
+
+      // CASE3) pineapple 마지막 추가
+      addPineapple = fruits.push(`pineapple`);
+      console.log(fruits);
+
+      // CASE4) orange 첫번째 추가
+      addOrange = fruits.unshift(`orange`);
+      console.log(fruits);
+
+
+      
+      // const fruits = [`coffe`, `blueberry`, `apple`, `pasta`];
+      // // CASE1) 첫번째 coffe 제거
+      
+      // let removeCoffe_array = [];
+      // for (i = 0; i < fruits.length - 1; i++) {
+      //   removeCoffe_array[i] = fruits[i + 1];
+      // }
+      // console.log(removeCoffe_array);
+
+      // // CASE2) 마지막 pasta 제거
+      // let removePasta_array = [];
+      // for (i = 0; i < removeCoffe_array.length - 1; i++) {
+      //   removePasta_array[i] = removeCoffe_array[i];
+      // }
+      // console.log(removePasta_array);
+
+      // // CASE3) pineapple 마지막 추가
+      // let addPineapple_array = [];
+      // for (i = 0; i < removePasta_array.length; i++) {
+      //   addPineapple_array[i] = removePasta_array[i];
+      //   addPineapple_array[removePasta_array.length] = `pineapple`;
+      // }
+      // console.log(addPineapple_array);
+      
+      // // CASE4) orange 첫번째 추가
+      // let addOrange_array = [];
+      // for (i = 0; i < addPineapple_array.length; i++) {
+      //   addOrange_array[0] = `orage`;
+      //   addOrange_array[i + 1] = addPineapple_array[i];
+        
+      // }
+      // console.log(addOrange_array);
+
+
     </script> 
   </body>
 </html>

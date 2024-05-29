@@ -84,16 +84,38 @@
     </p>
 
     <script>
-      function whatDay() {
+      function whatDay(num) {
         // TODO: 조건을 만족하는 whatDay 함수를 완성해주세요.
+
+        const dayOfWeek = [`월`, `화`, `수`, `목`, `금`, `토`, `일`];
+
+        if (typeof num === `number`) {
+
+          if (0 < num && num <= 7) {
+
+            return day = dayOfWeek[num - 1];
+
+          } else {
+
+            return null;
+          }
+
+        } else {
+
+          return null;
+
+        }
+
       }
 
+
+
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 whatDay 함수를 호출해주세요!
-      // whatDay(3);
-      // whatDay(7);
-      // whatDay(0);
-      // whatDay(10);
-      // whatDay('5');
+      console.log(whatDay(3));
+      console.log(whatDay(7));
+      console.log(whatDay(0));
+      console.log(whatDay(10));
+      console.log(whatDay('5'));
     </script>
   </body>
 </html>

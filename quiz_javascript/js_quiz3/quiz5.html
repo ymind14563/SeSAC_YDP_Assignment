@@ -90,24 +90,108 @@
     <br />
 
     <script>
-      function drawStars() {
+      function drawStars(n) {
         // TODO: drawStars() 함수 내부 코드를 채워주세요.
+        for (i = 0; i < n; i++) {
+
+          let star = n - i;
+
+          console.log(`*`.repeat(star));
+
+        }
       }
 
-      function drawStars2() {
+      function drawStars2(n) {
         // TODO: drawStars2() 함수 내부 코드를 채워주세요.
+        for (i = 0; i < n; i++) {
+
+          let star = i + 1;
+
+          let blank = n - i;
+
+          console.log(` `.repeat(blank) + `*`.repeat(star));
+          
+        }
+
       }
 
-      function drawStars3() {
+      function drawStars3(n) {
         // TODO: drawStars3() 함수 내부 코드를 채워주세요.
+        let star = 1;
+        
+        for (i = 0; i < n; i++) {
+
+          let max_star = n + (n - 1);
+
+          let blank = max_star - star;
+
+          let side_blank = blank / 2;
+
+          let line = ` `.repeat(side_blank) + `*`.repeat(star) + ` `.repeat(side_blank);
+
+          star += 2;
+
+          console.log(line);
+
+        }
+        
       }
 
-      function drawStars4() {
+      
+
+      function drawStars4(n) {
         // TODO: drawStars4() 함수 내부 코드를 채워주세요.
+      
+
+        let star = 1;
+        
+        for (i = 0; i < n + (n - 1); i++) {
+          
+          let max_star = n + (n - 1);
+
+          let blank = max_star - star;
+
+          let side_blank = blank / 2;
+
+          let line = ` `.repeat(side_blank) + `*`.repeat(star) + ` `.repeat(side_blank);
+
+          if(i < n - 1) star += 2;
+          // else star -= 2;
+          else if (i > n - 2) star -= 2;
+          
+        
+
+          console.log(line);
+
+        }
+        
       }
 
-      function drawStars5() {
+          
+
+
+      function drawStars5(n) {
         // TODO: drawStars5() 함수 내부 코드를 채워주세요.
+
+        let total_char = n + (n - 1);
+
+        let left_side_blank = total_char - n;
+
+        let right_side_blank = total_char - n - left_side_blank;
+                
+        for (i = 0; i < n; i++) {
+          
+          let line = ` `.repeat(left_side_blank) + `*`.repeat(n) + ` `.repeat(right_side_blank);
+          
+          console.log(line);
+
+          left_side_blank -= 1;
+
+          right_side_blank += 1;
+
+          
+        }
+
       }
 
       // TODO: 해당 html 파일을 실행한 브라우저 콘솔창에서 drawStars ~ drawStars5 함수를 호출해주세요!
@@ -123,7 +207,7 @@
       // drawStars4(3);
       // drawStars4(5);
 
-      // drawStars5(3);
+      drawStars5(3);
       // drawStars5(5);
     </script>
   </body>
