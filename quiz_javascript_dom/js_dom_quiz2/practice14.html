@@ -46,7 +46,40 @@
       // writeNote() 함수를 미리 정의해두었습니다.
 
       // [등록] 버튼 클릭시 writeNote() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
-      function writeNote() {}
+      function writeNote() {
+       
+          const writer = document.getElementById(`writer`).value;
+          const content = document.getElementById(`content`).value;
+          const table = document.getElementById(`table`);
+
+          if (writer === `` || content === ``) {
+            alert(`빈칸인 요소가 있습니다.`);
+            return;
+          }
+
+          const tr = document.createElement(`tr`);
+
+          let date = new Date();
+          let today = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}/${date.getHours()}:${date.getMinutes()}`
+         
+
+          const tdWriter = document.createElement(`td`);
+          tdWriter.textContent = writer;
+
+          const tdContent = document.createElement(`td`);
+          tdContent.textContent = content;
+
+          const tdDate = document.createElement(`td`);
+          tdDate.textContent = today;
+
+          tr.appendChild(tdWriter);
+          tr.appendChild(tdContent);
+          tr.appendChild(tdDate);
+
+          table.appendChild(tr);
+
+        }
+      
     </script>
   </body>
 </html>

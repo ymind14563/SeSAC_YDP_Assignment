@@ -38,18 +38,36 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
-      const spanElement = document.querySelectorAll(`div.container div span`);
+      // 배열 취급 (querySelector)
+      // const spanElement = document.querySelectorAll(`div.container div span`);
 
-      spanElement.forEach (span => {
-        span.style.color = `blueviolet`;
-        span.style.fontWeight = `bold`;
-      })
+      // spanElement.forEach (span => {
+      //   span.style.color = `blueviolet`;
+      //   span.style.fontWeight = `bold`;
+      // })
+      
+
+      // const containerElemnet = document.querySelector(`div.container`);
+
+      // containerElemnet.style.backgroundColor = `#eee`;
+      // containerElemnet.style.textAlign = `center`;
 
 
-      const containerElemnet = document.querySelector(`div.container`);
+      // 배열 취급 아님 (getElementBy)
+      const spanElement = document.getElementsByTagName("span");
+      for (i = 0; i < spanElement.length; i++) {
+        spanElement[i].style.color = `blueviolet`;
+        spanElement[i].style.fontWeight = `bold`;
+      }
 
-      containerElemnet.style.backgroundColor = `#eee`;
-      containerElemnet.style.textAlign = `center`;
+      const container = document.getElementsByClassName("container")[0];
+      container.style.backgroundColor = `#eee`;
+      container.style.textAlign = `center`;
+
+
+
+
+
 
     </script>
   </body>

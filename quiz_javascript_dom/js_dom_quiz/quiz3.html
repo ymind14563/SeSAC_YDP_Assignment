@@ -43,7 +43,10 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
-      const imgElement = document.querySelector(`img.poster`);
+      // const imgElement = document.querySelector(`img.poster`); // 식별자 사용
+      const imgElement = document.getElementsByClassName("poster")[0]; 
+      // Name으로 get 후 [0] 요소 선택, [1]은 없어서 undefined 에러
+
       imgElement.src = "./image/wooyoungwoo.jpg";
       imgElement.alt = "이상한 변호사 우영우";
       imgElement.width = 200;

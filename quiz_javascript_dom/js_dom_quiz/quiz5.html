@@ -68,17 +68,53 @@
       // TODO: 문제 조건을 만족하는 js 코드 작성
       // (참고) done 클래스와 todo 클래스에 대한 스타일시트는 haed > style 태그에 이미 정의되어 있습니다.
 
-      document.querySelectorAll(`div.container ul li`).forEach(li => {
+      ///////////// querySelector 사용 /////////////
+      // document.querySelectorAll(`div.container ul li`).forEach(li => {
         
-        if(li.classList.contains(`done`)) {
-          li.classList.remove(`done`);
-          li.classList.add(`todo`);
+      //   if(li.classList.contains(`done`)) {
+      //     li.classList.remove(`done`);
+      //     li.classList.add(`todo`);
 
-        } else if (li.classList.contains(`todo`)) {
-          li.classList.remove(`todo`);
-          li.classList.add(`done`);
-        }
-      });
+      //   } else if (li.classList.contains(`todo`)) {
+      //     li.classList.remove(`todo`);
+      //     li.classList.add(`done`);
+      //   }
+      // });
+
+      ///////////// getClassName 사용 /////////////
+      // const done = document.getElementsByClassName("done");
+      // const todo = document.getElementsByClassName("todo");
+
+      // // done -> todo 변경
+      // while (done.length > 0) {
+      //   done[0].classList.remove("done");
+      //   done[0].classList.add("todo");
+      // }
+
+      // // todo -> done 변경
+      // while (todo.length > 0) {
+      //   todo[0].classList.remove("todo");
+      //   todo[0].classList.add("done");
+      // }
+
+
+      ///////////// li 순환 /////////////
+      const lists = document.querySelectorAll("li");
+
+      for (let i = 0; i < lists.length; i++) {
+
+      if (lists[i].className === "done") {
+
+        lists[i].className = "todo";
+
+      } else if (lists[i].className === "todo") {
+
+        lists[i].className = "done";
+
+      }
+
+    }
+
     </script>
   </body>
 </html>

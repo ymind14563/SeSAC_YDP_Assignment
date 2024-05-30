@@ -30,10 +30,42 @@
       // cal(), reset() 함수를 미리 정의해두었습니다.
 
       // [계산] 버튼 클릭시 cal() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
-      function cal() {}
+      function cal() {
+        
+        if (isNaN(document.getElementById(`value1`).value) || isNaN(document.getElementById(`value2`).value)) {
+          alert(`숫자가 아닙니다`);
+          return;
+        }
+
+        const firstNumber = Number(document.getElementById(`value1`).value);
+        const secondNumber = Number(document.getElementById(`value2`).value);
+
+        const operator = document.getElementById(`operator`).value;
+        let cal_num;
+        switch (operator) {
+          case `+` : cal_num = firstNumber + secondNumber;
+          break;
+          case `-` : cal_num = firstNumber - secondNumber;
+          break;
+          case `*` : cal_num = firstNumber * secondNumber;
+          break;
+          case `/` : cal_num = firstNumber / secondNumber;
+          break;
+          default : cal_num = "지원하지 않는 연산자입니다."
+          break;
+        }
+
+        document.getElementById(`result`).value = cal_num;
+
+      }
 
       // [초기화] 버튼 클릭시 reset() 함수가 실행되도록 인라인 방식으로 미리 설정해 두었습니다.
-      function reset() {}
+      function reset() {
+        document.getElementById(`value1`).value = ``; 
+        document.getElementById(`value2`).value = ``;
+        document.getElementById(`operator`).value = ``;
+        document.getElementById(`result`).value = ``;
+      }
     </script>
   </body>
 </html>

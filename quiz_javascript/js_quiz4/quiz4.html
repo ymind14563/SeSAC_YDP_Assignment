@@ -60,7 +60,11 @@
           seller: `Jane`,
           isStock: true,
           color: [`balck`, `white`, `skyblue`, `yellow`],
-          orders: Math.floor(Math.random() * 90) + 10 
+          // Math.random 으로 0이상 1미만
+          // * 90 으로 0이상 90미만
+          // Math.floor 소수점 버림(소수점 첫째짜리 내림) (0이상 89이하)
+          // + 10으로 10이상 99이하
+          orders: (Math.floor(Math.random() * 90)) + 10 
         }
 
         console.log(charger);
